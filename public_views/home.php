@@ -290,7 +290,7 @@ if (!empty($_POST['editplaats'])){
 
                             if (score >= 30)
                                 return "Zwak wachtwoord";
-                            document.getElementById("submit").setAttribute("disabled", "disabled");
+                            document.getElementById("submit").removeAttribute("disabled");
 
                             return "Te kort";
                             document.getElementById("submit").setAttribute("disabled", "disabled");

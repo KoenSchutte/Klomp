@@ -3,8 +3,8 @@
 <div class="search-container">
     <div class="container">
 
-        <form action="#" method="post" class="centerform">
-            <input type="text" name="search" id="searchfield" placeholder="Keywords...">
+        <form action="search" method="get" class="centerform">
+            <input type="text" name="q" id="searchfield" placeholder="Keywords...">
             <input type="submit" id="postsearch" value="Zoeken">
         </form>
 
@@ -77,9 +77,9 @@
     <a href="agenda" id="agenda">Agenda</a>
     <a href="contact">Contact</a>
 
-    <form action="#" method="POST">
+    <form action="search" method="get">
         <!-- <div class="search-btn"></div> -->
-        <input type="text" placeholder="Zoeken...">
+        <input type="text" name="q" placeholder="Zoeken...">
         <input type="submit" class="search-btn">
     </form>
 

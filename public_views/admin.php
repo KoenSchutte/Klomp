@@ -3,7 +3,10 @@ if($_SESSION['RIGHTS'] > 2){
 
     $sql = "SELECT naam FROM plaats";
     $result = $login->db->query($sql);
-    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $rows = array();
+    while($row = $result->fetch_assoc()){
+         array_push($rows, $row);
+    };
     echo '			<aside style="padding-top: 100px">
 				<div style="display: inline-block" onclick="showAll()" class="btn active" id="btn-all">Alles</div>';
     foreach ($rows as $rownr => $row){
@@ -123,7 +126,7 @@ if($_SESSION['RIGHTS'] > 3){
         $sql = "DELETE FROM gebruiker WHERE id = ' " . $_POST['id']  . "' ";
         $result = $login->db->query($sql);
 
-        var_dump($_POST);
+//        var_dump($_POST);
         $email = $_POST['email'];
         $naam = $_POST['voornaam'];
         $to = $email;
